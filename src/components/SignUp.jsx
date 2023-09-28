@@ -42,10 +42,10 @@ const SignUp = () => {
     }
   return (
     <>
-    <div className='bg-black text-white'>
+    <div className=''>
 
-    <section>
-        <form onSubmit={formik.handleSubmit} style={mySection} className='border border-2 border-red-500 w-full lg:w-1/3 p-2 rounded'  action="">
+    <section className=''>
+        <form onSubmit={formik.handleSubmit} style={mySection} className=' w-full lg:w-1/3 p-2 rounded-xl bg-blue-950 py-5 px-5 rounded'  action="">
             <small className='text-red-500 font-bold'>{exist}</small>
             <div className='my-2 '>
                 <input type="text" className='w-full placeholder:text-sky-900 border-black py-2 rounded' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
