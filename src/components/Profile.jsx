@@ -9,7 +9,6 @@ const Profile = () => {
 
   useEffect(() => {
     let myDetails = JSON.parse(localStorage.getItem("loginDetails"))
-    console.log(myDetails)
     setUsername(myDetails.username)
   }, [])
 
@@ -28,7 +27,7 @@ const Profile = () => {
                 <h1 className=''>{username}'s profile</h1>
                 <p>Copy the link below to get anonymous messages</p>
                 <a className='text-red-500'>http://localhost:5173/message/{username}</a><br />
-                <Link to="">View Messages</Link>
+                <Link to="/view">View Messages</Link>
           </div>
         </div>
       </div>

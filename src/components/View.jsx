@@ -1,17 +1,20 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 
 const View = () => {
 
-    let endpoint = 'http://localhost:4678/user/message';
-
+    let endpoint = 'http://localhost:4678/user/view';
+const [message, setMessage] = useState([])
     useEffect(() => {
         let myLogin = JSON.parse(localStorage.getItem('loginDetails'))
-        // console.log(myLogin);
+        console.log(myLogin);
         axios.post(endpoint,myLogin)
         .then((result)=>{
-            console.log(result);
+            setMessage(result.data.response);
+            // setMessage(result.data.response)
+            // console.log(message);
         })
         .catch((error)=>[
             console.log(error)
@@ -19,7 +22,15 @@ const View = () => {
     }, [])
     
   return (
-    <div>View</div>
+    <>
+        <div>
+            {
+                message.map((item,index)=>(
+                    <div key={index}>{item.message}</div>
+                ))
+            }
+        </div>
+    </>
   )
 }
 

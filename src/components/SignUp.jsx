@@ -42,7 +42,7 @@ const SignUp = () => {
     }
   return (
     <>
-    <div>
+    <div className='bg-black text-white'>
 
     <section>
         <form onSubmit={formik.handleSubmit} style={mySection} className='border border-2 border-red-500 w-full lg:w-1/3 p-2 rounded'  action="">
