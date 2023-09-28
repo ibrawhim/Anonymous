@@ -5,6 +5,7 @@ import Landing from "./components/Landing"
 import Signin from "./components/Signin"
 import Profile from "./components/Profile"
 import Message from "./components/Message"
+import View from "./components/View"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/profile"  element={<Profile/>}/>
         <Route path="/message/:username"  element={<Message/>}/>
+        <Route path="/view" element={<View/>}/>
       </Routes>
     </div>
     </>
