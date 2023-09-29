@@ -43,21 +43,21 @@ const SignUp = () => {
   return (
     <>
     <div className=''>
-
-    <section className=''>
-        <form onSubmit={formik.handleSubmit} style={mySection} className=' w-full lg:w-1/3 p-2 rounded-xl bg-blue-950 py-5 px-5 rounded'  action="">
+    <section>
+        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-2 rounded-xl bg-blue-950 py-5 px-5 rounded'  action="">
+            <h1 className='text-white font-bold'>SIGN UP</h1>
             <small className='text-red-500 font-bold'>{exist}</small>
             <div className='my-2 '>
-                <input type="text" className='w-full placeholder:text-sky-900 border-black py-2 rounded' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
+                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
             </div>
             <div className='my-2 '>
-                <input type="text" className='w-full placeholder:text-sky-900 border-black py-2 rounded' placeholder='Email' name='email' onChange={formik.handleChange} value={formik.values.email}/>
+                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded' placeholder='Email' name='email' onChange={formik.handleChange} value={formik.values.email}/>
             </div>
             <div className='my-2 '>
-                <input type="text" className='w-full placeholder:text-sky-900 border-black py-2 rounded' placeholder='Password' name='password' onChange={formik.handleChange} value={formik.values.password}/>
+                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded' placeholder='Password' name='password' onChange={formik.handleChange} value={formik.values.password}/>
             </div>
             <div>
-                <button type='submit' className='w-full bg-white py-2 rounded'>Submit</button>
+                <button type='submit' className='w-full text-white bg-blue-900 border border-fuchsia-800 text-xl font-bold py-1 rounded'>Submit</button>
             </div>
             <div className='flex justify-between text-white'>
             <span>Have an account?</span>
