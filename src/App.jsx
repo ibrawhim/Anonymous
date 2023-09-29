@@ -7,6 +7,8 @@ import Profile from "./components/Profile"
 import Message from "./components/Message"
 import View from "./components/View"
 import Navbar from "./components/Navbar"
+import Faqs from "./components/Faqs"
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Route path="/profile"  element={<Profile/>}/>
         <Route path="/message/:username"  element={<Message/>}/>
         <Route path="/view" element={<View/>}/>
+        <Route path="/faqs"  element={<Faqs/>}/>
       </Routes>
     </div>
     </>

@@ -1,8 +1,9 @@
 import axios from 'axios'
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+
 
 
 
@@ -46,16 +47,21 @@ const Signin = () => {
     <div  >
 
     <section className='' >
-        <form onSubmit={formik.handleSubmit} style={mySection} className=''  action="">
+        <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 w-1/3'  action="">
+            <h1 className='text-white'>SIGN IN</h1>
             <small className='text-red-500'>{incorrect}</small>
-            <div className='my-2 py-2 px-2 border'>
-                <input type="text" className=' border-black py-2' placeholder='Username' name='username' onChange={formik.handleChange}/>
+            <div className=' my-2'>
+                <input type="text" className='w-full border-black rounded' placeholder='Username' name='username' onChange={formik.handleChange}/>
             </div>
-            <div className='my-2 py-2 px-2 border'>
-                <input type="text" className=' border-black py-2' placeholder='Password' name='password' onChange={formik.handleChange}/>
+            <div className=' my-2'>
+                <input type="text" className='w-full border-black rounded' placeholder='Password' name='password' onChange={formik.handleChange}/>
             </div>
-            <div>
-                <button type='submit' className='w-full bg-white'>Submit</button>
+            <div className='my-2'>
+                <button type='submit' className='w-full bg-white py-2 bg-fuchsia-500 rounded'>Submit</button>
+            </div>
+            <div className='flex justify-between'>
+                <span className='text-white'>New here?</span>
+                <span className='text-white'><Link to="/signup">Register here</Link></span>
             </div>
         </form>
     </section>
