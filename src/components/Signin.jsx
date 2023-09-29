@@ -47,7 +47,7 @@ const Signin = () => {
     <div  >
 
     <section className='' >
-        <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 w-1/3'  action="">
+        <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 lg:w-1/3 w-full'  action="">
             <h1 className='text-white'>SIGN IN</h1>
             <small className='text-red-500'>{incorrect}</small>
             <div className=' my-2'>

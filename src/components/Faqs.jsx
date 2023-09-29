@@ -61,7 +61,7 @@ const Faqs = () => {
                        </div>
                     <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
                     <div className='flex'>
-                            <span id='myDown1' className='hidden my-1 mx-1 text-white' onClick={downOne}><AiOutlineArrowDown/></span> 
+                            <span id='myDown1' className='hidden my-1 mx-1 text-white' onClick={downOne}><AiOutlineArrowDown/></span>
                             <span id='myRight1' onClick={rightOne}  className=' my-1 mx-1 text-white'><AiOutlineArrowRight/></span>
                         </div>
                         <div>

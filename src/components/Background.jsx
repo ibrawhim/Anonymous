@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom'
 const Background = () => {
 
   const location = useLocation()
-  const hiddenRoutes = ['/faqs']
+  const hiddenRoutes = ['/faqs', '/profile']
   const isHidden = hiddenRoutes.includes(location.pathname)
 
     let bgVideo = {

@@ -37,7 +37,7 @@ const Message = () => {
     <>
         <div>
             <section>
-                <p>Send a message to {username}</p>
+                <p className='text-white'>Send a message to {username}</p>
                 <div>
                     <textarea className='border border-2' name="" id="" cols="30" rows="5" onChange={(e)=>setMessage(e.target.value)}></textarea>
                 </div>
