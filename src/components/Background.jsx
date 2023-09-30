@@ -24,7 +24,9 @@ const Background = () => {
     }
   return isHidden ? null : ( 
     <div>
-        <video id='background-video' style={bgVideo}  autoPlay loop muted poster={capture}  src='/Video.mp4' type='video/mp4'></video>
+        <video id='background-video' style={bgVideo}  autoPlay loop muted poster={capture}  src='/Video.mp4' type='video/mp4'>
+        Your browser does not support the video tag.
+        </video>
     </div>
   )
 }
