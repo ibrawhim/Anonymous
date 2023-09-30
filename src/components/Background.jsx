@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../video/Video.mp4'
+// import video from '../video/Video.mp4'
 import capture from '../images/images.jpeg'
 import '../App.css'
 import { useLocation } from 'react-router-dom'
@@ -24,7 +24,7 @@ const Background = () => {
     }
   return isHidden ? null : ( 
     <div>
-        <video id='background-video' style={bgVideo}  autoPlay loop muted poster={capture}  src={video} typeof='video/mp4'></video>
+        <video id='background-video' style={bgVideo}  autoPlay loop muted poster={capture}  src='/Video.mp4' type='video/mp4'></video>
     </div>
   )
 }
