@@ -8,7 +8,8 @@ import Message from "./components/Message"
 import View from "./components/View"
 import Navbar from "./components/Navbar"
 import Faqs from "./components/Faqs"
-import Footer from "./components/Footer"
+// import Footer from "./components/Footer"
+
 
 
 
@@ -29,7 +30,6 @@ function App() {
         <Route path="/view" element={<View/>}/>
         <Route path="/faqs"  element={<Faqs/>}/>
       </Routes>
-      <Footer/>
     </div>
     </>
   )
