@@ -44,7 +44,7 @@ const SignUp = () => {
     <>
     <div className='py-2'>
     <section className='my-2'>
-        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-2 rounded-xl bg-blue-950 py-5 px-5 rounded'  action="">
+        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-10  rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
             <h1 className='text-white font-bold'>SIGN UP</h1>
             <small className='text-red-500 font-bold'>{exist}</small>
             <div className='my-2 '>
