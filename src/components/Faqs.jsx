@@ -45,7 +45,7 @@ const Faqs = () => {
     }
   return (
     <>
-        <div>
+        <div className='lg:mt-0 md:mt-0 mt-[-130px]'>
             <h1 className='text-center text-fuchsia-500 text-3xl font-bold py-4'>Frequently Asked Questions</h1> <hr />
             <section>
                 <div>
@@ -56,7 +56,7 @@ const Faqs = () => {
                         </span>
                         <div>
                             <p>Is my mesaage really anonymous as a sender?</p>
-                            <p  id='myP' className='hidden'>Yeah Absolutely!!. No one, including the receiver of your message would find out who you are.</p>
+                            <p  id='myP' className='hidden'>- Yeah Absolutely!!. No one, including the receiver of your message would find out who you are.</p>
                         </div>
                        </div>
                     <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
@@ -66,7 +66,7 @@ const Faqs = () => {
                         </div>
                         <div>
                             <p>Can i send a picture anonymously?</p>
-                            <p id='myP1' className='hidden'>No. Not yet, probably in the future.</p>
+                            <p id='myP1' className='hidden'>- No. Not yet, probably in the future.</p>
                         </div>
                     </div>
                     <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
@@ -76,7 +76,7 @@ const Faqs = () => {
                         </div>
                         <div>
                             <p>How long before this message is delivers?</p>
-                            <p id='myP2' className='hidden'>As soon as you hit send</p>
+                            <p id='myP2' className='hidden'>- As soon as you hit send</p>
                         </div>
                     </div>
                     <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
@@ -86,7 +86,7 @@ const Faqs = () => {
                         </div>
                         <div>
                             <p>Who can i send my anonymous message link to?</p>
-                            <p id='myP3' className='hidden'>Absolutely anyone.</p>
+                            <p id='myP3' className='hidden'>- Absolutely anyone.</p>
                         </div>
                     </div>
                 </div>

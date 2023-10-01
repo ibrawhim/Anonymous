@@ -24,21 +24,21 @@ const Navbar = () => {
         </svg>
     </button>
     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="font-medium flex flex-col md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul className="font-medium flex flex-col md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0">
         <li>
           <Link to="/" className="block py-2 pl-3 pr-4 text-red-500 rounded md:bg-transparent md:bg-fuchsia-900 md:px-2 md:text-fuchsia-500 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</Link>
         </li>
         <li>
-          <Link to="/faqs" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent text-indigo-500 md:border-0 md:hover:text-blue-700 md:p-0 text-red-500 dark:text-white md:dark:hover:text-blue-500 md:text-fuchsia-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQs</Link>
+          <Link to="/faqs" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent text-indigo-500 md:border-0 md:hover:text-blue-700 md:p-0 text-red-500 dark:text-white md:dark:hover:text-blue-500 md:text-fuchsia-500">FAQs</Link>
         </li>
         {/* <li>
           <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-indigo-500 font-bold dark:text-white md:dark:hover:text-blue-500 md:text-fuchsia-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Terms & Conditions</a>
         </li> */}
         <li>
-          <Link to="/signin" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-indigo-500 font-bold dark:text-white md:dark:hover:text-blue-500 md:text-fuchsia-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-red-500">About</Link>
+          <Link to="/signin" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-indigo-500 font-bold dark:text-white md:dark:hover:text-blue-500 md:text-fuchsia-500 text-red-500">About</Link>
         </li>
         <li>
-          <Link to="/signin" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-indigo-500 font-bold dark:text-white md:dark:hover:text-blue-500  md:text-fuchsia-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent text-red-500">Sign in</Link>
+          <Link to="/signin" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-indigo-500 font-bold dark:text-white md:dark:hover:text-blue-500  md:text-fuchsia-500 text-red-500">Sign in</Link>
         </li>
       </ul>
     </div>
