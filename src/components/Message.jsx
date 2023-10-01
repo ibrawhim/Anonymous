@@ -42,13 +42,13 @@ const Message = () => {
   return (
     <>
         <div>
-            <section style={myDiv} className='lg:w-1/3 w-full bg-fuchsia-700 opacity-80 rounded-xl py-8 px-5'>
+            <section style={myDiv} className='lg:w-1/3 w-full lg:bg-fuchsia-700 bg-red-500 opacity-80 rounded-xl opacity-90 lg:w-1/3 w-full  my-2 sm:my-10 md:my-20 px-3'>
                 <p className='text-white text-xl py-2'>Send message anonymously to <span className='font-bold text-red-200'>{username}</span></p>
                 <div className='w-full'>
                     <textarea className='border border-2 rounded w-full bg-blue-950 placeholder:text-white' placeholder='Leave a message here' name="" id="" cols="30" rows="7" onChange={(e)=>setMessage(e.target.value)}></textarea>
                 </div>
                 <small className='text-red-500 font-bold'>{empty}</small>
-                <div className='w-full'>
+                <div className='w-full py-3'>
                     <button onClick={sendMessage} className='w-full bg-blue-950 rounded py-[2px] text-white font-bold'>Send Message</button>
                 </div>
             </section>

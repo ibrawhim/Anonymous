@@ -45,7 +45,7 @@ const Faqs = () => {
     }
   return (
     <>
-        <div className='lg:mt-0 md:mt-0 mt-[-130px]'>
+        <div className='lg:mt-0 md:mt-0 mt-[-200px]'>
             <h1 className='text-center text-fuchsia-500 text-3xl font-bold py-4'>Frequently Asked Questions</h1> <hr />
             <section>
                 <div>

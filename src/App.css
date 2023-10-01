@@ -3,7 +3,8 @@
   body {
     background: url("../src/images/small.jpg") no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
+    background-attachment: fixed; 
   }
   #myNav {
     margin-bottom: 50% ;
