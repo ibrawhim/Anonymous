@@ -46,8 +46,8 @@ const Signin = () => {
   return (
     <div  >
 
-    <section className='' >
-        <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 lg:w-1/3 w-full'  action="">
+    <section className='sm:mt-16' >
+        <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 lg:w-1/3 w-full  lg: my-2 sm:my-10 md:my-20'  action="">
             <h1 className='text-white'>SIGN IN</h1>
             <small className='text-red-500'>{incorrect}</small>
             <div className=' my-2'>
@@ -61,7 +61,7 @@ const Signin = () => {
             </div>
             <div className='flex justify-between'>
                 <span className='text-white'>New here?</span>
-                <span className='text-white'><Link to="/signup">Register here</Link></span>
+                <span className='text-red-500 underline'><Link to="/signup">Register here</Link></span>
             </div>
         </form>
     </section>

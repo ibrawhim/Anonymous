@@ -61,7 +61,7 @@ const SignUp = () => {
             </div>
             <div className='flex justify-between text-white'>
             <span>Have an account?</span>
-            <Link to="/signin">Sign in Here</Link>
+            <Link to="/signin" className='text-red-500 underline'>Sign in Here</Link>
             </div>
         </form>
     </section>

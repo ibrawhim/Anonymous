@@ -5,4 +5,7 @@
     background-size: cover;
     height: 100vh;
   }
+  #myNav {
+    margin-bottom: 50% ;
+  }
 }
