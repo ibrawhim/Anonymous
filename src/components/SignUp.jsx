@@ -42,8 +42,8 @@ const SignUp = () => {
     }
   return (
     <>
-    <div className=''>
-    <section>
+    <div className='py-2'>
+    <section className='my-2'>
         <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-2 rounded-xl bg-blue-950 py-5 px-5 rounded'  action="">
             <h1 className='text-white font-bold'>SIGN UP</h1>
             <small className='text-red-500 font-bold'>{exist}</small>

@@ -44,7 +44,7 @@ const Signin = () => {
         transform: 'translate(-50%, -50%)'
     }
   return (
-    <div  >
+    <div  className='my-5'>
 
     <section className='sm:mt-16' >
         <form onSubmit={formik.handleSubmit} style={mySection} className=' bg-blue-950 p-10 rounded-2xl opacity-90 lg:w-1/3 w-full  lg: my-2 sm:my-10 md:my-20'  action="">
