@@ -11,7 +11,7 @@ const Message = () => {
     const [small, setSmall] = useState('')
     let {username} = useParams()
     
-    let endpoint = 'https://anonymous-back.onrender.com/user/message'
+    let endpoint = 'https://anonymous-back.onrender.com/message'
     const date = new Date()
     let myTime = date.toLocaleTimeString()
     let myDate = date.toLocaleDateString()
