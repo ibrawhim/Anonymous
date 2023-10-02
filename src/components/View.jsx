@@ -5,7 +5,8 @@ import React, { useEffect, useState } from 'react'
 
 const View = () => {
 
-    let endpoint = 'https://anonymous-back.onrender.com/view';
+    // let endpoint = 'https://anonymous-back.vercel.app/view';
+    let endpoint = 'https://anonymous-back.onrender.com/view'
     let endpoint2 = 'https://anonymous-back.onrender.com/delete';
 const [message, setMessage] = useState([])
     useEffect(() => {
