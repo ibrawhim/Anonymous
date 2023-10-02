@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>     
-<nav  className="bg-blue-950  lg:px-10 " >
+<nav  className="bg-blue-950  lg:px-10 lg:h-[50px] h-[70px]" >
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" id='myNav'>
     <Link to="/" className="flex items-center">
         <span className="self-center font-bold whitespace-nowrap text-red-500 md:text-fuchsia-500 underline">ANONYMOUS</span>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+    <div className="hidden w-full md:block md:w-auto bg-blue-950"  id="navbar-default">
       <ul className="font-medium flex flex-col md:p-0 mt-4   md:flex-row md:space-x-8 md:mt-0 md:border-0">
         <li>
           <Link to="/" className="block py-2 pl-3 pr-4 text-red-500 rounded md:bg-transparent md:bg-fuchsia-900 md:px-2 md:text-fuchsia-500 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
         <Link to="/faqs" className="block py-2 pl-3 pr-4 text-red-500 rounded md:bg-transparent md:bg-fuchsia-900 md:px-2 md:text-fuchsia-500 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">About</Link>
         </li>
         <li>
-        <Link to="/signin" className="block py-2 pl-3 pr-4 text-red-500 rounded md:bg-transparent md:bg-fuchsia-900 md:px-2 md:text-fuchsia-500 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Sign In</Link>
+        <Link to="/signin" className="block py-2 pl-3 pr-4 text-red-500 rounded md:bg-transparent md:bg-fuchsia-900 md:px-2 md:text-fuchsia-500 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Sign in</Link>
         </li>
       </ul>
     </div>

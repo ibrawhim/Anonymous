@@ -8,6 +8,7 @@ import Message from "./components/Message"
 import View from "./components/View"
 import Navbar from "./components/Navbar"
 import Faqs from "./components/Faqs"
+import Footer from "./components/Footer"
 // import Footer from "./components/Footer"
 
 
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-    <div>
+    <div className="flex flex-col justify-between h-screen">
       <Navbar/>
       <Background/>
       <Routes>
@@ -31,6 +32,7 @@ function App() {
         <Route path="/faqs"  element={<Faqs/>}/>
       </Routes>
     </div>
+    <Footer/>
     </>
   )
 }

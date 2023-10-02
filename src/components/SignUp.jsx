@@ -9,7 +9,7 @@ import * as Yup from 'yup'
 
 const SignUp = () => {
     const [exist, setExist] = useState('')
-    let endpoint = 'http://localhost:4678/user/signup'
+    let endpoint = 'https://anonymous-back.onrender.com/user/signup'
     let navigate = useNavigate()
     let formik = useFormik({
         initialValues: {

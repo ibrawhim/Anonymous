@@ -5,8 +5,8 @@ import React, { useEffect, useState } from 'react'
 
 const View = () => {
 
-    let endpoint = 'http://localhost:4678/user/view';
-    let endpoint2 = 'http://localhost:4678/user/delete';
+    let endpoint = 'https://anonymous-back.onrender.com/user/view';
+    let endpoint2 = 'https://anonymous-back.onrender.com/user/delete';
 const [message, setMessage] = useState([])
     useEffect(() => {
         let myLogin = JSON.parse(localStorage.getItem('loginDetails'))

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Footer from './Footer'
 
 
 
@@ -10,7 +11,7 @@ const Message = () => {
     const [small, setSmall] = useState('')
     let {username} = useParams()
     
-    let endpoint = 'http://localhost:4678/user/message'
+    let endpoint = 'https://anonymous-back.onrender.com/user/message'
     const date = new Date()
     let myTime = date.toLocaleTimeString()
     let myDate = date.toLocaleDateString()
@@ -54,7 +55,7 @@ const Message = () => {
       }
   return (
     <>
-        <div>
+        <div className=''>
             <div className='text-4xl text-red-500'>{small}</div>
             <section style={myDiv} className='lg:w-1/3 w-full lg:bg-fuchsia-700 bg-red-500 opacity-80 rounded-xl opacity-90 lg:w-1/3 w-full  my-2 sm:my-10 md:my-20 px-3'>
                 <p className='text-white text-xl py-2'>Send message anonymously to <span className='font-bold text-red-200'>{username}</span></p>
