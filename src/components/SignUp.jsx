@@ -9,7 +9,7 @@ import * as Yup from 'yup'
 
 const SignUp = () => {
     const [exist, setExist] = useState('')
-    let endpoint = 'https://anonymous-back.onrender.com/user/signup'
+    let endpoint = 'https://anonymous-back.vercel.app/user/signup'
     let navigate = useNavigate()
     let formik = useFormik({
         initialValues: {
