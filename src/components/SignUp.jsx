@@ -21,6 +21,7 @@ const SignUp = () => {
             console.log(values);
             axios.post(endpoint,values)
             .then((response)=>{
+                console.log(response);
                 if(response.data.status==false){
                     setExist(response.data.message)
                 }
