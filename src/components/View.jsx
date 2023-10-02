@@ -6,20 +6,28 @@ import React, { useEffect, useState } from 'react'
 const View = () => {
 
     let endpoint = 'http://localhost:4678/user/view';
+    let endpoint2 = 'http://localhost:4678/user/delete';
 const [message, setMessage] = useState([])
     useEffect(() => {
         let myLogin = JSON.parse(localStorage.getItem('loginDetails'))
-        console.log(myLogin);
         axios.post(endpoint,myLogin)
         .then((result)=>{
             setMessage(result.data.response);
-            // setMessage(result.data.response)
-            // console.log(message);
         })
         .catch((error)=>[
             console.log(error)
         ])
     }, [])
+    const deleteOne = (time,date,message) => {
+        axios.post(endpoint2,{time,date,message})
+        .then((res)=>{
+          setMessage(res.data.newResult);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+      
+      }
     let content = {
         maxWidth: '1200px' ,
         margin: '0 auto',
@@ -28,16 +36,17 @@ const [message, setMessage] = useState([])
   return (
     <>
         <div style={content} className=''>
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-white lg:mt-0 md:mt-0 mt-[-200px] gap-2 top-0'>
-            { message.length == 0 ? 'No message' :
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-white lg:mt-0 md:mt-0 mt-[-200px] gap-2'>
+            { !message ? 'No message' :
                 message.map((item,index)=>(
-                    <div key={index} className='border my-2'>
-                        <div className='text-white'>Anonymous {index+1}</div>
-                        <div className='text-white'>{item.message}</div>
-                        <div className='text-white'>
-                            <span>{item.myTime}</span>
-                            <span>{item.myDate}</span>
+                    <div key={index} className='border bg-blue-950'>
+                        <div className='text-red-500 lg:text-fuchsia-500'>Anonymous {index+1}</div>
+                        <div className='text-white h-[110px] my-2'>{item.message}</div>
+                        <div className='text-white py-4'>
+                            <div className='text-[]'>Time: {item.myTime}</div>
+                            <div className='text-[px]'>Date: {item.myDate}</div>
                         </div>
+                        <button  className='w-full lg:bg-fuchsia-500 bg-red-500 py-2' onClick={()=>deleteOne(item.myTime,item.myDate,item.message)}>Delete</button>
                     </div>
                     
                 ))
