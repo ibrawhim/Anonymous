@@ -19,7 +19,7 @@ const Signin = () => {
         },
         onSubmit: (values) => {
             console.log(values)
-            axios.post(endpoint,values)
+            axios.post(endpoint2,values)
             .then((response)=>{
                 console.log(response);
                 if (response.data.status==true){
