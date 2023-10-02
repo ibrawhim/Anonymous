@@ -10,7 +10,7 @@ import * as Yup from 'yup'
 const Signin = () => {
     const [incorrect, setIncorrect] = useState('')
     // let endpoint = 'http://localhost:4678/signin'
-    let endpoint2 = 'https://anonymous-back.vercel.app/signin'
+    let url = 'https://anonymous-back.vercel.app/signin'
     let navigate = useNavigate()
     let formik = useFormik({
         initialValues: {
@@ -19,7 +19,7 @@ const Signin = () => {
         },
         onSubmit: (values) => {
             console.log(values)
-            axios.post(endpoint2,values)
+            axios.post(url,values)
             .then((response)=>{
                 console.log(response);
                 if (response.data.status==true){
