@@ -25,7 +25,7 @@ const Profile = () => {
           <div style={myDiv} className='border p-20 my-2 bg-blue-950 opacity-80 rounded-xl'>
                 <h1 className='text-xl font-bold text-fuchsia-500'>Hi, {username}</h1>
                 <p className=' my-2 text-fuchsia-500'>Copy the link below to get anonymous messages</p>
-                <a className='text-red-500 my-2 hover:text-fuchsia-500'>http://localhost:5173/message/{username}</a><br />
+                <a className='text-red-500 my-2 hover:text-fuchsia-500'>https://anonymous-tau.vercel.app/message/{username}</a><br />
                 <div className='my-5'>
                   <Link className='border py-2 rounded px-[2px] text-blue-950 bg-fuchsia-500 hover:bg-blue-950 hover:text-white' to="/view">View Messages</Link>
                 </div>

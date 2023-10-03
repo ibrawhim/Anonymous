@@ -9,6 +9,7 @@ import View from "./components/View"
 import Navbar from "./components/Navbar"
 import Faqs from "./components/Faqs"
 import Footer from "./components/Footer"
+import About from "./components/About"
 // import Footer from "./components/Footer"
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/message/:username"  element={<Message/>}/>
         <Route path="/view" element={<View/>}/>
         <Route path="/faqs"  element={<Faqs/>}/>
+        <Route path="/about"  element={<About/>}/>
       </Routes>
     </div>
     <Footer/>

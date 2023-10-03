@@ -45,11 +45,11 @@ const Faqs = () => {
     }
   return (
     <>
-        <div className=''>
-            <h1 className='text-center text-fuchsia-500 text-3xl font-bold py-4'>Frequently Asked Questions</h1> <hr />
+        <div className='lg:top-0 lg:mb-[50px] mb-[90px]'>
+            <h1 className='text-center text-fuchsia-500 text-3xl font-bold '>Frequently Asked Questions</h1> <hr />
             <section>
                 <div>
-                    <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
+                    <div className='flex my-5 mx-10 px-5 py-3 bg-blue-950 text-fuchsia-500 rounded-xl'>
                         <span className='flex'>
                             <span id='myDown' className='hidden my-1 mx-1 text-white' onClick={down}><AiOutlineArrowDown/></span> 
                             <span id='myRight' onClick={right} className=' my-1 mx-1 text-white'><AiOutlineArrowRight/></span>
@@ -59,7 +59,7 @@ const Faqs = () => {
                             <p  id='myP' className='hidden'>- Yeah Absolutely!!. No one, including the receiver of your message would find out who you are.</p>
                         </div>
                        </div>
-                    <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
+                    <div className='flex my-10 mx-10 px-5 py-3 bg-blue-950 text-fuchsia-500 rounded-xl'>
                     <div className='flex'>
                             <span id='myDown1' className='hidden my-1 mx-1 text-white' onClick={downOne}><AiOutlineArrowDown/></span>
                             <span id='myRight1' onClick={rightOne}  className=' my-1 mx-1 text-white'><AiOutlineArrowRight/></span>
@@ -69,7 +69,7 @@ const Faqs = () => {
                             <p id='myP1' className='hidden'>- No. Not yet, probably in the future.</p>
                         </div>
                     </div>
-                    <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
+                    <div className='flex my-10 mx-10 px-5 py-3 bg-blue-950 text-fuchsia-500 rounded-xl'>
                     <div className='flex'>
                             <span id='myDown2' className='hidden my-1 mx-1 text-white' onClick={downTwo}><AiOutlineArrowDown/></span> 
                             <span id='myRight2' onClick={rightTwo} className=' my-1 mx-1 text-white'><AiOutlineArrowRight/></span>
@@ -79,7 +79,7 @@ const Faqs = () => {
                             <p id='myP2' className='hidden'>- As soon as you hit send</p>
                         </div>
                     </div>
-                    <div className='flex my-10 mx-10 p-5 bg-blue-950 text-fuchsia-500 rounded-xl'>
+                    <div className='flex my-10 mx-10 px-5 py-3 bg-blue-950 text-fuchsia-500 rounded-xl'>
                     <div className='flex'>
                             <span id='myDown3' className='hidden my-1 mx-1 text-white' onClick={downThree}><AiOutlineArrowDown/></span> 
                             <span id='myRight3' onClick={rightThree} className=' my-1 mx-1 text-white'><AiOutlineArrowRight/></span>
