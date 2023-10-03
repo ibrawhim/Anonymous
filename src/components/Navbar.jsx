@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <>     
-<nav  className="bg-blue-950  lg:px-10 lg:h-[50px] h-[70px]" >
+<nav  className="bg-blue-950  lg:px-10 lg:h-[50px] h-[70px] z-[2] w-full" >
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" id='myNav'>
     <Link to="/" className="flex items-center">
         <span className="self-center font-bold whitespace-nowrap text-red-500 md:text-fuchsia-500 underline">ANONYMOUS</span>

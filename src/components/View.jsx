@@ -37,7 +37,7 @@ const [message, setMessage] = useState([])
   return (
     <>
         <div style={content} className=''>
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-white lg:mt-0 md:mt-0 mt-[-200px] gap-2'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-white lg:mt-0 md:mt-0  gap-2'>
             { !message ? 'No message' :
                 message.map((item,index)=>(
                     <div key={index} className='border bg-blue-950'>

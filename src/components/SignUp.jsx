@@ -37,7 +37,7 @@ const SignUp = () => {
     })
     let mySection = {
         position: 'absolute',
-        top: '50%',
+        // top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)'
     }
@@ -45,7 +45,7 @@ const SignUp = () => {
     <>
     <div className='py-2'>
     <section className='my-2'>
-        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-10  rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
+        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-10 lg:top-[30%] top-[50%] rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
             <h1 className='text-white font-bold'>SIGN UP</h1>
             <small className='text-red-500 font-bold'>{exist}</small>
             <div className='my-2 '>
