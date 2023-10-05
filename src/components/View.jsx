@@ -41,13 +41,13 @@ const [message, setMessage] = useState([])
             { !message ? 'No message' :
                 message.map((item,index)=>(
                     <div key={index} className='border bg-blue-950 lg:w-[250px] md:w-[250px] sm:w-[100%]'>
-                        <div className='text-red-500 lg:text-fuchsia-500 px-2'>Anonymous {index+1}</div>
+                        <div className='text-[#ae1e55] px-2'>Anonymous {index+1}</div>
                         <div className='text-white h-[125px] text-ellipsis  my-2 px-2'>{item.message}</div>
                         <div className='text-white py-6 px-2'>
                             <div className='text-[]'>Time: {item.myTime}</div>
                             <div className='text-[px]'>Date: {item.myDate}</div>
                         </div>
-                        <button  className='w-full lg:bg-fuchsia-500 bg-red-500 py-2' onClick={()=>deleteOne(item.myTime,item.myDate,item.message)}>Delete</button>
+                        <button  className='w-full  bg-[#ae1e55] py-2' onClick={()=>deleteOne(item.myTime,item.myDate,item.message)}>Delete</button>
                     </div>
                     
                 ))
