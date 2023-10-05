@@ -45,24 +45,24 @@ const SignUp = () => {
     <>
     <div className='py-2'>
     <section className='my-2'>
-        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-90  w-full lg:w-1/3 p-10 lg:top-[30%] top-[50%] rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
-            <h1 className='text-white font-bold'>SIGN UP</h1>
+        <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-70  w-full lg:w-1/3 p-10 lg:top-[30%] top-[50%] rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
+            <h1 className='text-[#ae1e55] font-bold'>SIGN UP</h1>
             <small className='text-red-500 font-bold'>{exist}</small>
             <div className='my-2 '>
-                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded text-white' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
+                <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
             </div>
             <div className='my-2 '>
-                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded text-white' placeholder='Email' name='email' onChange={formik.handleChange} value={formik.values.email}/>
+                <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Email' name='email' onChange={formik.handleChange} value={formik.values.email}/>
             </div>
             <div className='my-2 '>
-                <input type="text" className='w-full bg-fuchsia-800 placeholder:text-white border-black py-2 rounded text-white' placeholder='Password' name='password' onChange={formik.handleChange} value={formik.values.password}/>
+                <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Password' name='password' onChange={formik.handleChange} value={formik.values.password}/>
             </div>
             <div>
-                <button type='submit' className='w-full text-white bg-blue-900 border border-fuchsia-800 text-xl font-bold py-1 rounded'>Submit</button>
+                <button type='submit' className='w-full text-[#ae1e55] bg-blue-900 border border-fuchsia-800 text-xl font-bold py-1 rounded'>Submit</button>
             </div>
             <div className='flex justify-between text-white'>
-            <span>Have an account?</span>
-            <Link to="/signin" className='text-red-500 underline'>Sign in Here</Link>
+            <span className='text-[#ae1e55] font-semibold'>Have an account?</span>
+            <Link to="/signin" className='text-[#ae1e55] font-semibold underline'>Sign in Here</Link>
             </div>
         </form>
     </section>

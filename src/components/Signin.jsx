@@ -52,13 +52,13 @@ const Signin = () => {
             <h1 className='text-white'>SIGN IN</h1>
             <small className='text-red-500'>{incorrect}</small>
             <div className=' my-2'>
-                <input type="text" className='w-full border-black rounded' placeholder='Username' name='username' onChange={formik.handleChange}/>
+                <input type="text" className='w-full bg-[#ae1e55] border-black rounded' placeholder='Username' name='username' onChange={formik.handleChange}/>
             </div>
             <div className=' my-2'>
-                <input type="text" className='w-full border-black rounded' placeholder='Password' name='password' onChange={formik.handleChange}/>
+                <input type="text" className='w-full bg-[#ae1e55] border-black rounded' placeholder='Password' name='password' onChange={formik.handleChange}/>
             </div>
             <div className='my-2'>
-                <button type='submit' className='w-full bg-white py-2 bg-fuchsia-500 rounded'>Submit</button>
+                <button type='submit' className='w-full py-2 bg-[#ae1e55] rounded'>Submit</button>
             </div>
             <div className='flex justify-between'>
                 <span className='text-white'>New here?</span>

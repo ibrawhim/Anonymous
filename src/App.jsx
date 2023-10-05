@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import Background from "./components/Background"
+// import Background from "./components/Background"
 import SignUp from "./components/SignUp"
 import Landing from "./components/Landing"
 import Signin from "./components/Signin"
@@ -11,18 +11,23 @@ import Faqs from "./components/Faqs"
 import Footer from "./components/Footer"
 import About from "./components/About"
 // import Footer from "./components/Footer"
+import svg from '../src/images/rose.svg'
 
 
 
 
 function App() {
-
+let mybg = {
+  backgroundImage: `url(${svg})`,
+  backgroundrepeat: 'no-repeat',
+  backgroundSize: 'cover'
+}
 
   return (
     <>
-    <div className="flex flex-col justify-between h-screen">
+    <div style={mybg} className="flex flex-col justify-between h-screen">
       <Navbar/>
-      <Background/>
+      {/* <Background/> */}
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/signup"  element={<SignUp/>}/>
