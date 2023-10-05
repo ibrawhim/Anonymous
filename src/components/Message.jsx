@@ -73,7 +73,7 @@ const Message = () => {
                 </div>
                 <small className='text-[#ae1e55]  font-bold'>{empty}</small>
                 <div className='w-full py-3'>
-                    <button onClick={sendMessage} className='w-full bg-[#ae1e5] rounded py-[2px] text-blue-950 font-bold'>Send Message</button>
+                    <button onClick={sendMessage} className='w-full bg-[#ae1e5] rounded py-[2px] text-white font-bold'>Send Message</button>
                 </div>
             </section>
         </div>
