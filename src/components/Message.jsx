@@ -31,11 +31,7 @@ const Message = () => {
                 console.log(result);
                 setMessage('')
                 if(result.data.status==true){
-                    Swal.fire(
-                        'Good job!',
-                        'Your message has been sent !',
-                        'success'
-                      )
+                    Swal.fire('Your message has been sent!')
                     // setEmpty(result.data.message)
                 }
 
