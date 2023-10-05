@@ -3,6 +3,8 @@ import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+import Swal from 'sweetalert2'
+
 
 
 
@@ -21,16 +23,33 @@ const SignUp = () => {
             console.log(values);
             axios.post(endpoint,values)
             .then((response)=>{
-                console.log(response);
                 if(response.data.status==false){
                     setExist(response.data.message)
                 }
                 else {
-                    console.log(response);
+                    Swal.fire({
+                        title: 'Sign up successful.',
+                        width: 400,
+                        padding: '3em',
+                        color: '#716add',
+                        background: '#ae1e55',
+                        backdrop: `
+                          rgba(0,0,123,0.4)
+                          url("/images/nyan-cat.gif")
+                          left top
+                          no-repeat
+                        `
+                      })
                     navigate('/signin')
                 }
             })
             .catch((error)=>{
+                Swal.fire({
+                    title: 'Sign up error',
+                    background: 'rgb(23 37 84)',
+                    color: '#ae1e55',
+                    width: '300px'
+                })
                 console.log(error);
             })
         }
@@ -47,7 +66,7 @@ const SignUp = () => {
     <section className='my-2'>
         <form onSubmit={formik.handleSubmit} style={mySection} className='opacity-70  w-full lg:w-1/3 p-10 lg:top-[30%] top-[50%] rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
             <h1 className='text-[#ae1e55] font-bold'>SIGN UP</h1>
-            <small className='text-red-500 font-bold'>{exist}</small>
+            <small className='text-amber-300 font-bold'>{exist}</small>
             <div className='my-2 '>
                 <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
             </div>
