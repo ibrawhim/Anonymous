@@ -45,7 +45,7 @@ const Signin = () => {
                     title: 'Username or Password incorrect',
                     background: 'rgb(23 37 84)',
                     color: '#ae1e55',
-                    width: '300px'
+                    width: 350
                 })
                     navigate('/signin')
                     // setIncorrect(response.data.message)
