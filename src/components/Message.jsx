@@ -33,7 +33,7 @@ const Message = () => {
                 if(result.data.status==true){
                     Swal.fire(
                         'Good job!',
-                        'You clicked the button!',
+                        'You message has been sent !',
                         'success'
                       )
                     // setEmpty(result.data.message)
