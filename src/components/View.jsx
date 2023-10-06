@@ -37,11 +37,11 @@ const [message, setMessage] = useState([])
   return (
     <>
         <div style={content} className=''>
-            <div className='lg:mb-[200px] md:mb-[200%] mb-[200%]  grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 text-white lg:mt-0 md:mt-0  lg:gap-20 gap-2'>
+            <div className='lg:mb-[200px] md:mb-[200%] mb-[200%] w-full  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'>
             { !message ? 'No message' :
                 message.map((item,index)=>(
-                    <div key={index} className='border bg-blue-950 lg:w-[250px] md:w-[250px] sm:w-[100%]'>
-                        <div className='text-[#ae1e55] px-2'>Anonymous {index+1}</div>
+                    <div key={index} className='border bg-blue-950'>
+                        <div className='text-[#ae1e55]  px-2'>Anonymous {index+1}</div>
                         <div className='text-white h-[125px] text-ellipsis  my-2 px-2'>{item.message}</div>
                         <div className='text-white py-6 px-2'>
                             <div className='text-[]'>Time: {item.myTime}</div>

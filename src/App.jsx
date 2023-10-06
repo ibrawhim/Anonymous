@@ -12,6 +12,7 @@ import Footer from "./components/Footer"
 import About from "./components/About"
 // import Footer from "./components/Footer"
 import svg from '../src/images/rose.svg'
+import Error from "./components/Error"
 
 
 
@@ -19,16 +20,19 @@ import svg from '../src/images/rose.svg'
 function App() {
 let mybg = {
   backgroundImage: `url(${svg})`,
-  backgroundrepeat: 'no-repeat',
-  backgroundSize: 'cover'
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: "fixed",
+  height: '100vh'
 }
 
   return (
     <>
-    <div style={mybg} className="flex flex-col justify-between h-screen">
+    <div style={mybg} className="flex flex-col justify-between">
       <Navbar/>
       {/* <Background/> */}
       <Routes>
+        <Route path="*" element={<Error/>}/>
         <Route path="/" element={<Landing/>}/>
         <Route path="/signup"  element={<SignUp/>}/>
         <Route path="/signin" element={<Signin/>}/>

@@ -31,7 +31,11 @@ const Message = () => {
                 console.log(result);
                 setMessage('')
                 if(result.data.status==true){
-                    Swal.fire('Your message has been sent!')
+                    Swal.fire({
+                      title:'Your message has been sent!',
+                      color: '#716add',
+                      background: '#ae1e55',
+                    })
                     // setEmpty(result.data.message)
                 }
 
