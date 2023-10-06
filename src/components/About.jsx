@@ -10,7 +10,7 @@ const About = () => {
                 <p> Welcome to our anonymous app, a platform where your voice matters, and your identity remains a secret. We believe that everyone should have the freedom to express themselves without fear of judgment, discrimination, or exposure. With this app, you can connect with others, share your thoughts, seek advice, and engage in candid conversations—all while preserving your anonymity.
                 </p>
                 </div>
-                <div className='bg-blue-950 h-screen text-[#ae1e55] text-red-500 px-4 py-5'>
+                <div className='bg-blue-950 h-screen text-[#ae1e55] px-4 py-5'>
                 <h1 className='font-bold text-2xl'>Our Mission</h1> 
                 <p> At anonymous app, our mission is to create a safe and supportive environment for open and honest communication. We understand that there are times when you want to discuss personal matters, explore new ideas, or simply connect with people who share your interests, without revealing your true identity. That's where we come in. We provide a platform that prioritizes your privacy while fostering meaningful connections.
                 </p>
