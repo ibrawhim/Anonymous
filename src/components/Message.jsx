@@ -68,7 +68,7 @@ const Message = () => {
                 <p className='text-[#ae1e55] text-xl py-2'>Send message anonymously to <span className='font-bold text-red-200'>{username}</span></p>
                 <div className='w-full'>
                     <textarea id="textArea" className='border border-2 text-white rounded w-full bg-[#ae1e55] placeholder:text-blue-950' placeholder='Leave a message here' name="" cols="30" rows="7" onChange={(e)=>setMessage(e.target.value)} maxLength={maxLength} value={message}></textarea>
-                    <div id="charCount" className="text-sm text-[#ae1e55]">Characters left: <span id="count" className="font-bold text-red-200">200</span></div>
+                    <div id="charCount" className="text-sm text-[#ae1e55]">Characters left: <span id="count" className="font-bold  text-white">200</span></div>
 
                 </div>
                 <small className='text-[#ae1e55]  font-bold'>{empty}</small>

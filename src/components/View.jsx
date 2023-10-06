@@ -46,7 +46,7 @@ const [message, setMessage] = useState([])
   return (
     <>
         <div >
-            <div  className={message.length==0 ? 'text-center text-white text-2xl': 'lg:mb-[200px] md:mb-[200%] mb-[200%] mx-10 lg:mx-5 my-10  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'}>
+            <div  className={message.length==0 ? 'text-center text-white text-2xl': 'lg:mb-[200px] md:mb-[200%] mb-[200%] mx-10 lg:mx-5 my-10  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white z-[-2]'}>
             {message.length==0 ?  'Oops! no one has sent you a message yet' :
                 message.map((item,index)=>(
                     <div key={index} className='border bg-blue-950'>
