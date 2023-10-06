@@ -29,22 +29,22 @@ const [message, setMessage] = useState([])
         })
       
       }
-    let content = {
-        maxWidth: '1200px' ,
-        margin: '0 auto',
-        padding: '20px'
-    }
+    // let content = {
+    //     maxWidth: '1200px' ,
+    //     margin: '0 auto',
+    //     padding: '20px'
+    // }
   return (
     <>
-        <div style={content} className=''>
-            <div className='lg:mb-[200px] md:mb-[200%] mb-[200%] w-full  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'>
+        <div >
+            <div  className='lg:mb-[200px] border border-2 md:mb-[200%] mb-[200%] mx-10 lg:mx-5 my-10  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'>
             { !message ? 'No message' :
                 message.map((item,index)=>(
                     <div key={index} className='border bg-blue-950'>
                         <div className='text-[#ae1e55]  px-2'>Anonymous {index+1}</div>
                         <div className='text-white h-[125px] text-ellipsis  my-2 px-2'>{item.message}</div>
                         <div className='text-white py-6 px-2'>
-                            <div className='text-[]'>Time: {item.myTime}</div>
+                            <div>Time: {item.myTime}</div>
                             <div className='text-[px]'>Date: {item.myDate}</div>
                         </div>
                         <button  className='w-full  bg-[#ae1e55] py-2' onClick={()=>deleteOne(item.myTime,item.myDate,item.message)}>Delete</button>

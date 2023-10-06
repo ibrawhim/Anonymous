@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 // import Background from "./components/Background"
 import SignUp from "./components/SignUp"
 import Landing from "./components/Landing"
@@ -17,18 +17,19 @@ import Error from "./components/Error"
 
 
 
+
 function App() {
 let mybg = {
   backgroundImage: `url(${svg})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundAttachment: "fixed",
-  height: '100vh'
+  height: '500vh'
 }
 
   return (
     <>
-    <div style={mybg} className="flex flex-col justify-between">
+    <div style={mybg} className="">
       <Navbar/>
       {/* <Background/> */}
       <Routes>
@@ -41,6 +42,7 @@ let mybg = {
         <Route path="/view" element={<View/>}/>
         <Route path="/faqs"  element={<Faqs/>}/>
         <Route path="/about"  element={<About/>}/>
+        <Route path='/home' element={<Navigate to='/'/>}/>
       </Routes>
     </div>
     <Footer/>
