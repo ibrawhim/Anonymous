@@ -34,11 +34,20 @@ const [message, setMessage] = useState([])
     //     margin: '0 auto',
     //     padding: '20px'
     // }
+    // let mySection = {
+    //     position: 'absolute',
+    //     top: '50%',
+    //     left: '50%',
+    //     transform: 'translate(-50%, -50%)',
+    //     border: 'blue',
+    //     width: '100%',
+    //     height: '100%'
+    // }
   return (
     <>
         <div >
-            <div  className='lg:mb-[200px] border border-2 md:mb-[200%] mb-[200%] mx-10 lg:mx-5 my-10  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'>
-            { !message ? 'No message' :
+            <div  className={message.length==0 ? 'text-center text-white text-2xl': 'lg:mb-[200px] md:mb-[200%] mb-[200%] mx-10 lg:mx-5 my-10  grid lg:grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1 text-white'}>
+            {message.length==0 ?  'Oops! no one has sent you a message yet' :
                 message.map((item,index)=>(
                     <div key={index} className='border bg-blue-950'>
                         <div className='text-[#ae1e55]  px-2'>Anonymous {index+1}</div>
@@ -49,7 +58,6 @@ const [message, setMessage] = useState([])
                         </div>
                         <button  className='w-full  bg-[#ae1e55] py-2' onClick={()=>deleteOne(item.myTime,item.myDate,item.message)}>Delete</button>
                     </div>
-                    
                 ))
             }
             </div>
