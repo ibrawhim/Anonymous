@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 import Swal from 'sweetalert2'
+import {FiLoader} from 'react-icons/fi'
 
 
 
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2'
 
 const SignUp = () => {
     const [exist, setExist] = useState('')
+    const [loader, setLoader] = useState(false)
     let endpoint = 'https://anonymous-back.onrender.com/signup'
     let navigate = useNavigate()
     let formik = useFormik({
@@ -20,6 +22,7 @@ const SignUp = () => {
             password: ''
         },
         onSubmit: (values) => {
+            setLoader(true)
             console.log(values);
             axios.post(endpoint,values)
             .then((response)=>{
@@ -34,16 +37,18 @@ const SignUp = () => {
                         color: '#716add',
                         background: '#ae1e55',
                         backdrop: `
-                          rgba(0,0,123,0.4)
-                          url("/images/nyan-cat.gif")
-                          left top
-                          no-repeat
+                        rgba(0,0,123,0.4)
+                        url("/images/nyan-cat.gif")
+                        left top
+                        no-repeat
                         `
-                      })
+                    })
                     navigate('/signin')
                 }
+                setLoader('')
             })
             .catch((error)=>{
+
                 Swal.fire({
                     title: 'Sign up error',
                     background: 'rgb(23 37 84)',
@@ -51,6 +56,7 @@ const SignUp = () => {
                     width: '300px'
                 })
                 console.log(error);
+                setLoader(false)
             })
         }
     })
@@ -66,7 +72,7 @@ const SignUp = () => {
     <section className='my-2'>
         <form onSubmit={formik.handleSubmit} style={mySection} className=' w-full lg:w-1/3 p-10 lg:top-[30%] top-[55%] rounded-xl bg-blue-950 py-5 px-5 rounded my-2 sm:my-10 md:my-20'  action="">
             <h1 className='text-[#ae1e55] font-bold'>SIGN UP</h1>
-            <small className='text-amber-300 font-bold'>{exist}</small>
+            <small className='text-white font-bold'>{exist}</small>
             <div className='my-2 '>
                 <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Username' name='username' onChange={formik.handleChange} value={formik.values.username}/>
             </div>
@@ -77,7 +83,9 @@ const SignUp = () => {
                 <input type="text" className='w-full bg-[#ae1e55] placeholder:text-blue-950 border-black py-2 rounded text-white' placeholder='Password' name='password' onChange={formik.handleChange} value={formik.values.password}/>
             </div>
             <div>
-                <button type='submit' className='w-full text-[#ae1e55] bg-blue-900 border border-fuchsia-800 text-xl font-bold py-1 rounded'>Submit</button>
+                <button type='submit' className='w-full text-[#ae1e55] bg-blue-900 border border-fuchsia-800 text-xl font-bold py-1 rounded'>
+                    {loader ? <FiLoader className='mx-auto'/> : 'Submit'}
+                    </button>
             </div>
             <div className='flex justify-between text-white'>
             <span className='text-[#ae1e55] font-semibold'>Have an account?</span>
