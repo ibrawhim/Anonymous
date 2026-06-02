@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaPaperPlane, FaUserSecret } from 'react-icons/fa';
+import { FaPaperPlane, FaUserSecret, FaSpinner } from 'react-icons/fa';
 import { toast } from 'sonner';
 
 const Message = () => {
@@ -118,7 +118,7 @@ const Message = () => {
         >
           {loading ? (
             <>
-              <FaSpinner className="animate-spin" /> Sending...
+              <FaSpinner className="animate-spin" /> Sending Message...
             </>
           ) : (
             <>
