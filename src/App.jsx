@@ -29,7 +29,7 @@ let mybg = {
 
   return (
     <>
-    <div style={mybg} className="z-0">
+    <div className="z-0">
       <Navbar/>
       {/* <Background/> */}
       <Routes>
