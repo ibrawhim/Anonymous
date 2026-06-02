@@ -31,7 +31,7 @@ let mybg = {
     <>
     <div className="z-0">
       <Navbar/>
-      {/* <Background/> */}
+      <div className="mt-16">
       <Routes>
         <Route path="*" element={<Error/>}/>
         <Route path="/" element={<Landing/>}/>
@@ -44,8 +44,9 @@ let mybg = {
         <Route path="/about"  element={<About/>}/>
         <Route path='/home' element={<Navigate to='/'/>}/>
       </Routes>
+      </div>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }

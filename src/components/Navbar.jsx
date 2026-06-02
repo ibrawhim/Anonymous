@@ -1,44 +1,56 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../App.css'
-
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>      
-<nav className="bg-blue-950 text-[#ae1e55] lg:px-10">
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <Link to="/" className="flex items-center">
-        <span className="self-center text-xl font-bold whitespace-nowrap lg:mx-0 mx-5">Anonymous</span>
-    </Link>
-    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-        <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0">
-        <li>
-          <Link to="/" className="block py-2 pl-3 pr-4 text-[#ae1e55] md:p-0 font-bold " aria-current="page">Home</Link>
-        </li>
-        <li>
-          <Link to="/about" className="block py-2 pl-3 pr-4 text-[#ae1e55] md:p-0 font-bold">About</Link>
-        </li>
-        <li>
-          <Link to="/faqs" className="block py-2 pl-3 pr-4 text-[#ae1e55] md:p-0 font-bold">FAQs</Link>
-        </li>
-        <li>
-          <Link to="/signin" className="block py-2 pl-3 pr-4 text-[#ae1e55] md:p-0 font-bold">Sign in</Link>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    </>
-  )
-}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#060912]/90 backdrop-blur-2xl border-b border-white/10">
+      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+        
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-rose-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-violet-500/50 transition-transform group-hover:rotate-12">
+            🕶️
+          </div>
+          <div>
+            <span className="font-syne font-bold text-2xl text-white tracking-tighter">ANON</span>
+            <div className="text-[10px] text-white/40 -mt-1 tracking-[1px]">IDENTITY NETWORK</div>
+          </div>
+        </Link>
 
-export default Navbar
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-9 text-sm font-medium">
+          <Link to="/" className="text-white/70 hover:text-white transition-colors duration-200">Home</Link>
+          <Link to="/about" className="text-white/70 hover:text-white transition-colors duration-200">About</Link>
+          <Link to="/view" className="text-white/70 hover:text-white transition-colors duration-200">Messages</Link>
+          <Link to="/profile" className="text-white/70 hover:text-white transition-colors duration-200">Link</Link>
+          <Link to="/signin" className="text-white/70 hover:text-white transition-colors duration-200">Sign In</Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white text-2xl p-2 hover:bg-white/10 rounded-xl transition-colors"
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-[#060912] border-t border-white/10 py-6">
+          <div className="flex flex-col items-center gap-6 text-lg font-medium">
+            <Link to="/" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">Home</Link>
+            <Link to="/about" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">About</Link>
+            <Link to="/faqs" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">FAQs</Link>
+            <Link to="/signin" onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">Sign In</Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
