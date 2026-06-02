@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
-import Swal from 'sweetalert2'
+import {toast, Toaster} from 'sonner'
 
 const Signin = () => {
   const endpoint = 'https://anonymous-back.onrender.com/signin'
@@ -25,22 +25,10 @@ const Signin = () => {
           setLoading(false)
           if (response.data.status == true) {
             localStorage.setItem('loginDetails', JSON.stringify(response.data.result))
-            Swal.fire({
-              title: 'Sign in successful.',
-              width: 500,
-              padding: '3em',
-              color: '#e2e8f0',
-              background: '#0f172a',
-              backdrop: `rgba(0,0,0,0.6) url("/images/nyan-cat.gif") left top no-repeat`
-            })
+            toast.success("Sign in successful.")
             navigate('/profile')
           } else {
-            Swal.fire({
-              title: 'Username or Password incorrect',
-              background: '#0f172a',
-              color: '#f87171',
-              width: 350
-            })
+            toast.error("Username or Password incorrect.")
             navigate('/signin')
           }
         })
@@ -430,6 +418,7 @@ const Signin = () => {
             <Link to="/signup" className="footer-link">Create an account</Link>
           </div>
         </div>
+                <Toaster position="top-right" />
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
-import Swal from 'sweetalert2'
+import {toast, Toaster} from 'sonner'
 import { FiLoader } from 'react-icons/fi'
 
 const SignUp = () => {
@@ -28,25 +28,13 @@ const SignUp = () => {
           if (response.data.status == false) {
             setExist(response.data.message)
           } else {
-            Swal.fire({
-              title: 'Sign up successful.',
-              width: 400,
-              padding: '3em',
-              color: '#e2e8f0',
-              background: '#0f172a',
-              backdrop: `rgba(0,0,0,0.6) url("/images/nyan-cat.gif") left top no-repeat`
-            })
+            toast.success("Sign up successful.")
             navigate('/signin')
           }
           setLoader(false)
         })
         .catch((error) => {
-          Swal.fire({
-            title: 'Sign up error',
-            background: '#0f172a',
-            color: '#f87171',
-            width: '300px'
-          })
+          toast.error("Sign up error.")
           console.log(error)
           setLoader(false)
         })
@@ -491,6 +479,7 @@ const SignUp = () => {
             <div className="privacy-dot" />
           </div>
         </div>
+                <Toaster position="top-right" />
       </div>
     </>
   )

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaTrash, FaInbox, FaSpinner } from 'react-icons/fa';
-import { toast } from 'sonner';
+import { toast, Toaster } from 'sonner';
 
 const View = () => {
   const endpoint = 'https://anonymous-back.onrender.com/view';
@@ -47,6 +47,7 @@ const View = () => {
 
   return (
     <div className="min-h-screen bg-[#060912] relative overflow-hidden font-dmsans py-20 px-6">
+                <Toaster position="top-right" />
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_20%,rgba(99,51,255,0.18),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_80%_70%,rgba(255,51,119,0.16),transparent_60%)]" />
