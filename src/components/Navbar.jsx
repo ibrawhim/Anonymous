@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Hide navbar on all message routes
+  // Extra safety (optional)
   if (location.pathname.startsWith("/message")) {
     return null;
   }
@@ -17,12 +17,12 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-rose-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-violet-500/50 transition-transform group-hover:rotate-12">
+          <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-rose-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg shadow-violet-500/50 group-hover:rotate-12 transition">
             🕶️
           </div>
 
           <div>
-            <span className="font-syne font-bold text-2xl text-white tracking-tighter">
+            <span className="font-bold text-2xl text-white tracking-tighter">
               ANON
             </span>
             <div className="text-[10px] text-white/40 -mt-1 tracking-[1px]">
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link className="text-white/70 hover:text-white" to="/">Home</Link>
           <Link className="text-white/70 hover:text-white" to="/about">About</Link>
           <Link className="text-white/70 hover:text-white" to="/view">Messages</Link>
-          <Link className="text-white/70 hover:text-white" to="/profile">Link</Link>
+          <Link className="text-white/70 hover:text-white" to="/profile">Profile</Link>
           <Link className="text-white/70 hover:text-white" to="/signin">Sign In</Link>
         </div>
 
